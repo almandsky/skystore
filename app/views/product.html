@@ -1,0 +1,10 @@
+<h1>{{ myproduct.title }}</h1>
+
+<div ng-bind-html="myproduct.description"></div>
+
+<strong>{{ myproduct.price.data.formatted.without_tax }}</strong>
+
+<button ng-if="!addStatus" ng-click="addCart()" class="btn btn-success">Add to Cart</button>
+<button ng-if="addStatus" class="btn btn-warning">{{addStatus}}</button>
+
+<a ng-href="#/cart"> Go and check your cart</a>
